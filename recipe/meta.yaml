@@ -1,5 +1,5 @@
 {% set name = "georaster" %}
-{% set version = "1.23" %}
+{% set version = "1.24" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 167e23d8e5bddb86816c6b24dc2f020c99af8a2c0a56df9e135a4485409c40f2
+  sha256: 2b938a1b5bfed8e24fca717470d547e82b438b5f8d717ee6806ad2a84965721f
 
 build:
     number: 0
@@ -30,13 +30,13 @@ test:
     - georaster
 
 about:
-  home: https://github.com/atedstone/georaster
+  home: https://github.com/GeoUtils/georaster
   license: GNU GPL v.3
   summary: 'easy processing and analysis of geographic and projected rasters'
   license_family: GPL3
   license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE.txt'
   doc_url: http://georaster.readthedocs.io
-  dev_url: https://github.com/atedstone/georaster
+  dev_url: https://github.com/GeoUtils/georaster
 
 extra:
   recipe-maintainers:
