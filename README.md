@@ -1,7 +1,7 @@
 About georaster
 ===============
 
-Home: https://github.com/atedstone/georaster
+Home: https://github.com/GeoUtils/georaster
 
 Package license: GNU GPL v.3
 
