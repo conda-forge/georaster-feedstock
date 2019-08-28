@@ -7,13 +7,12 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  url: https://github.com/GeoUtils/{{ name[0] }}/archive/{{ version }}.tar.gz
+  url: https://github.com/GeoUtils/{{ name }}/archive/{{ version }}.tar.gz
   sha256: 4c3263954b70cdf399cb1c35b9dc54993924d99460814dae71c604bf8aa34e45
 
 build:
     noarch: python
-    number: 2
+    number: 0
     script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
