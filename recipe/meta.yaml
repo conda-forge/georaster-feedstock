@@ -1,5 +1,5 @@
 {% set name = "georaster" %}
-{% set version = "1.25" %}
+{% set version = "v1.26" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,8 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c89d85fceff4ab5c23d91407001ecddfce236893708494966f2dbf689d991a0b
+  url: https://github.com/GeoUtils/{{ name[0] }}/archive/{{ version }}.tar.gz
+  sha256: 4c3263954b70cdf399cb1c35b9dc54993924d99460814dae71c604bf8aa34e45
 
 build:
     number: 0
