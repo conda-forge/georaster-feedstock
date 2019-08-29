@@ -1,19 +1,17 @@
-{% set name = "georaster" %}
-{% set version = "v1.26" %}
+{% set version = "1.26" %}
 
 package:
-  name: {{ name|lower }}
+  name: georaster
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/GeoUtils/{{ name }}/archive/{{ version }}.tar.gz
+  url: https://github.com/GeoUtils/georaster/archive/v{{ version }}.tar.gz
   sha256: 4c3263954b70cdf399cb1c35b9dc54993924d99460814dae71c604bf8aa34e45
 
 build:
+    number: 1
     noarch: python
-    number: 0
-    script: python -m pip install --no-deps --ignore-installed .
+    script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   host:
@@ -33,10 +31,10 @@ test:
 
 about:
   home: https://github.com/GeoUtils/georaster
-  license: GNU GPL v.3
-  summary: 'easy processing and analysis of geographic and projected rasters'
+  license: GPL-3.0
+  summary: 'Easy processing and analysis of geographic and projected rasters'
   license_family: GPL3
-  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE.txt'
+  license_file: LICENSE.txt
   doc_url: http://georaster.readthedocs.io
   dev_url: https://github.com/GeoUtils/georaster
 

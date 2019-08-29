@@ -3,11 +3,11 @@ About georaster
 
 Home: https://github.com/GeoUtils/georaster
 
-Package license: GNU GPL v.3
+Package license: GPL-3.0
 
 Feedstock license: BSD 3-Clause
 
-Summary: easy processing and analysis of geographic and projected rasters
+Summary: Easy processing and analysis of geographic and projected rasters
 
 
 
