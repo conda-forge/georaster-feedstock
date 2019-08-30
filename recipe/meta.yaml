@@ -1,15 +1,15 @@
-{% set version = "1.26" %}
+{% set version = "1.26.1" %}
 
 package:
   name: georaster
   version: {{ version }}
 
 source:
-  url: https://github.com/GeoUtils/georaster/archive/v{{ version }}.tar.gz
-  sha256: 4c3263954b70cdf399cb1c35b9dc54993924d99460814dae71c604bf8aa34e45
+  url: https://github.com/GeoUtils/georaster/archive/{{ version }}.tar.gz
+  sha256: 32c4741f451df5fd97b552306e816b24043585f81f56d89a15174fff19a83766
 
 build:
-    number: 1
+    number: 0
     noarch: python
     script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
