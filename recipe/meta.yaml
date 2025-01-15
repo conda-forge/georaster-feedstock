@@ -9,23 +9,25 @@ source:
   sha256: 48ac9c3648edf7897ebddb5678f426493bba382160c3931ea8aed30424a95c34
 
 build:
-    number: 0
+    number: 1
     noarch: python
     script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   host:
     - pip
-    - python
+    - python {{ python_min }}
 
   run:
-    - python
+    - python >={{ python_min }}
     - numpy
     - scipy
     - gdal
     - pyproj
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - georaster
 
